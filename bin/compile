@@ -9,7 +9,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 mkdir -p $BUILD_DIR/.heroku/bin
-cp $BP_DIR/bin/heroku-javaagent.jar $BUILD_DIR/.heroku/bin/heroku-javaagent.jar
+cp $BP_DIR/heroku-javaagent.jar $BUILD_DIR/.heroku/bin/heroku-javaagent.jar
 
 mkdir -p $BUILD_DIR/.profile.d/
 cat << EOF > $BUILD_DIR/.profile.d/java-metrics.#!/bin/sh

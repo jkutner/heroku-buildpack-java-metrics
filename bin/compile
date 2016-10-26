@@ -12,6 +12,6 @@ mkdir -p $BUILD_DIR/.heroku/bin
 cp $BP_DIR/heroku-javaagent.jar $BUILD_DIR/.heroku/bin/heroku-javaagent.jar
 
 mkdir -p $BUILD_DIR/.profile.d/
-cat << EOF > $BUILD_DIR/.profile.d/java-metrics.#!/bin/sh
+cat << EOF > $BUILD_DIR/.profile.d/java-metrics.sh
 export JAVA_TOOL_OPTIONS="-javaagent:.heroku/bin/heroku-javaagent.jar \${JAVA_TOOL_OPTIONS}"
 EOF
